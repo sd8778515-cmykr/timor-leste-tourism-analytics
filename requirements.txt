@@ -1,0 +1,28 @@
+# ===========================================================================
+#  Sistema Mining & Exploring — Turizmu Timor-Leste
+#  Capstone Project | S1 Siencia Komputador | DIT 2026
+#
+#  PYTHON 3.11 OBRIGATORIU
+#  Instala:  py -3.11 -m pip install -r requirements.txt
+# ===========================================================================
+
+# --- Data handling ---------------------------------------------------------
+pandas>=2.2,<4.0
+numpy>=1.26,<3.0
+
+# --- Data collection (Apify API) --------------------------------------------
+requests>=2.31
+python-dotenv>=1.0
+
+# --- Data mining / machine learning ----------------------------------------
+scikit-learn>=1.4,<2.0
+scipy>=1.11
+
+# --- Visualization ---------------------------------------------------------
+matplotlib>=3.10,<4      # tick_labels iha boxplot
+plotly>=6.9,<7           # scatter_map; versaun validada lokal
+streamlit>=1.57,<2       # width="stretch"; versaun validada lokal
+
+# --- Notebook EDA (opsional, ba notebooks/01_eda_turismo.ipynb) ------------
+jupyterlab>=4.0
+ipykernel>=6.29

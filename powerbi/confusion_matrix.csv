@@ -1,0 +1,167 @@
+﻿task,model,actual,predicted,n,is_correct
+Sentiment,Model 1 - Lexicon (sentiment),Positive,Positive,440,True
+Sentiment,Model 1 - Lexicon (sentiment),Positive,Neutral,193,False
+Sentiment,Model 1 - Lexicon (sentiment),Positive,Negative,16,False
+Sentiment,Model 1 - Lexicon (sentiment),Neutral,Positive,32,False
+Sentiment,Model 1 - Lexicon (sentiment),Neutral,Neutral,27,True
+Sentiment,Model 1 - Lexicon (sentiment),Neutral,Negative,2,False
+Sentiment,Model 1 - Lexicon (sentiment),Negative,Positive,5,False
+Sentiment,Model 1 - Lexicon (sentiment),Negative,Neutral,23,False
+Sentiment,Model 1 - Lexicon (sentiment),Negative,Negative,10,True
+Kategoria,Model 1 - Rule-based text (category),Historical,Historical,2,True
+Kategoria,Model 1 - Rule-based text (category),Historical,Religious,0,False
+Kategoria,Model 1 - Rule-based text (category),Historical,Traditional,3,False
+Kategoria,Model 1 - Rule-based text (category),Historical,Modern,33,False
+Kategoria,Model 1 - Rule-based text (category),Religious,Historical,0,False
+Kategoria,Model 1 - Rule-based text (category),Religious,Religious,0,True
+Kategoria,Model 1 - Rule-based text (category),Religious,Traditional,0,False
+Kategoria,Model 1 - Rule-based text (category),Religious,Modern,0,False
+Kategoria,Model 1 - Rule-based text (category),Traditional,Historical,0,False
+Kategoria,Model 1 - Rule-based text (category),Traditional,Religious,0,False
+Kategoria,Model 1 - Rule-based text (category),Traditional,Traditional,0,True
+Kategoria,Model 1 - Rule-based text (category),Traditional,Modern,2,False
+Kategoria,Model 1 - Rule-based text (category),Modern,Historical,1,False
+Kategoria,Model 1 - Rule-based text (category),Modern,Religious,0,False
+Kategoria,Model 1 - Rule-based text (category),Modern,Traditional,0,False
+Kategoria,Model 1 - Rule-based text (category),Modern,Modern,16,True
+Kategoria,Model 1 - Rule-based context (category),Historical,Historical,0,True
+Kategoria,Model 1 - Rule-based context (category),Historical,Religious,0,False
+Kategoria,Model 1 - Rule-based context (category),Historical,Traditional,3,False
+Kategoria,Model 1 - Rule-based context (category),Historical,Modern,35,False
+Kategoria,Model 1 - Rule-based context (category),Religious,Historical,0,False
+Kategoria,Model 1 - Rule-based context (category),Religious,Religious,0,True
+Kategoria,Model 1 - Rule-based context (category),Religious,Traditional,0,False
+Kategoria,Model 1 - Rule-based context (category),Religious,Modern,0,False
+Kategoria,Model 1 - Rule-based context (category),Traditional,Historical,0,False
+Kategoria,Model 1 - Rule-based context (category),Traditional,Religious,0,False
+Kategoria,Model 1 - Rule-based context (category),Traditional,Traditional,0,True
+Kategoria,Model 1 - Rule-based context (category),Traditional,Modern,2,False
+Kategoria,Model 1 - Rule-based context (category),Modern,Historical,1,False
+Kategoria,Model 1 - Rule-based context (category),Modern,Religious,0,False
+Kategoria,Model 1 - Rule-based context (category),Modern,Traditional,0,False
+Kategoria,Model 1 - Rule-based context (category),Modern,Modern,16,True
+Sentiment,Baseline - Majority (sentiment),Positive,Positive,649,True
+Sentiment,Baseline - Majority (sentiment),Positive,Neutral,0,False
+Sentiment,Baseline - Majority (sentiment),Positive,Negative,0,False
+Sentiment,Baseline - Majority (sentiment),Neutral,Positive,61,False
+Sentiment,Baseline - Majority (sentiment),Neutral,Neutral,0,True
+Sentiment,Baseline - Majority (sentiment),Neutral,Negative,0,False
+Sentiment,Baseline - Majority (sentiment),Negative,Positive,38,False
+Sentiment,Baseline - Majority (sentiment),Negative,Neutral,0,False
+Sentiment,Baseline - Majority (sentiment),Negative,Negative,0,True
+Sentiment,Model 2 - Naive Bayes,Positive,Positive,649,True
+Sentiment,Model 2 - Naive Bayes,Positive,Neutral,0,False
+Sentiment,Model 2 - Naive Bayes,Positive,Negative,0,False
+Sentiment,Model 2 - Naive Bayes,Neutral,Positive,61,False
+Sentiment,Model 2 - Naive Bayes,Neutral,Neutral,0,True
+Sentiment,Model 2 - Naive Bayes,Neutral,Negative,0,False
+Sentiment,Model 2 - Naive Bayes,Negative,Positive,38,False
+Sentiment,Model 2 - Naive Bayes,Negative,Neutral,0,False
+Sentiment,Model 2 - Naive Bayes,Negative,Negative,0,True
+Sentiment,Model 2 - Logistic Regression,Positive,Positive,618,True
+Sentiment,Model 2 - Logistic Regression,Positive,Neutral,27,False
+Sentiment,Model 2 - Logistic Regression,Positive,Negative,4,False
+Sentiment,Model 2 - Logistic Regression,Neutral,Positive,46,False
+Sentiment,Model 2 - Logistic Regression,Neutral,Neutral,11,True
+Sentiment,Model 2 - Logistic Regression,Neutral,Negative,4,False
+Sentiment,Model 2 - Logistic Regression,Negative,Positive,23,False
+Sentiment,Model 2 - Logistic Regression,Negative,Neutral,7,False
+Sentiment,Model 2 - Logistic Regression,Negative,Negative,8,True
+Sentiment,Model 2 - Linear SVM,Positive,Positive,641,True
+Sentiment,Model 2 - Linear SVM,Positive,Neutral,8,False
+Sentiment,Model 2 - Linear SVM,Positive,Negative,0,False
+Sentiment,Model 2 - Linear SVM,Neutral,Positive,58,False
+Sentiment,Model 2 - Linear SVM,Neutral,Neutral,2,True
+Sentiment,Model 2 - Linear SVM,Neutral,Negative,1,False
+Sentiment,Model 2 - Linear SVM,Negative,Positive,29,False
+Sentiment,Model 2 - Linear SVM,Negative,Neutral,3,False
+Sentiment,Model 2 - Linear SVM,Negative,Negative,6,True
+Sentiment,Model 2 - Random Forest,Positive,Positive,631,True
+Sentiment,Model 2 - Random Forest,Positive,Neutral,13,False
+Sentiment,Model 2 - Random Forest,Positive,Negative,5,False
+Sentiment,Model 2 - Random Forest,Neutral,Positive,57,False
+Sentiment,Model 2 - Random Forest,Neutral,Neutral,2,True
+Sentiment,Model 2 - Random Forest,Neutral,Negative,2,False
+Sentiment,Model 2 - Random Forest,Negative,Positive,31,False
+Sentiment,Model 2 - Random Forest,Negative,Neutral,4,False
+Sentiment,Model 2 - Random Forest,Negative,Negative,3,True
+Kategoria,Baseline - Majority (category),Historical,Historical,0,True
+Kategoria,Baseline - Majority (category),Historical,Religious,0,False
+Kategoria,Baseline - Majority (category),Historical,Traditional,0,False
+Kategoria,Baseline - Majority (category),Historical,Modern,38,False
+Kategoria,Baseline - Majority (category),Religious,Historical,0,False
+Kategoria,Baseline - Majority (category),Religious,Religious,0,True
+Kategoria,Baseline - Majority (category),Religious,Traditional,0,False
+Kategoria,Baseline - Majority (category),Religious,Modern,0,False
+Kategoria,Baseline - Majority (category),Traditional,Historical,0,False
+Kategoria,Baseline - Majority (category),Traditional,Religious,0,False
+Kategoria,Baseline - Majority (category),Traditional,Traditional,0,True
+Kategoria,Baseline - Majority (category),Traditional,Modern,2,False
+Kategoria,Baseline - Majority (category),Modern,Historical,0,False
+Kategoria,Baseline - Majority (category),Modern,Religious,0,False
+Kategoria,Baseline - Majority (category),Modern,Traditional,0,False
+Kategoria,Baseline - Majority (category),Modern,Modern,17,True
+Kategoria,Model 2 - Naive Bayes,Historical,Historical,0,True
+Kategoria,Model 2 - Naive Bayes,Historical,Religious,0,False
+Kategoria,Model 2 - Naive Bayes,Historical,Traditional,0,False
+Kategoria,Model 2 - Naive Bayes,Historical,Modern,38,False
+Kategoria,Model 2 - Naive Bayes,Religious,Historical,0,False
+Kategoria,Model 2 - Naive Bayes,Religious,Religious,0,True
+Kategoria,Model 2 - Naive Bayes,Religious,Traditional,0,False
+Kategoria,Model 2 - Naive Bayes,Religious,Modern,0,False
+Kategoria,Model 2 - Naive Bayes,Traditional,Historical,0,False
+Kategoria,Model 2 - Naive Bayes,Traditional,Religious,0,False
+Kategoria,Model 2 - Naive Bayes,Traditional,Traditional,0,True
+Kategoria,Model 2 - Naive Bayes,Traditional,Modern,2,False
+Kategoria,Model 2 - Naive Bayes,Modern,Historical,0,False
+Kategoria,Model 2 - Naive Bayes,Modern,Religious,0,False
+Kategoria,Model 2 - Naive Bayes,Modern,Traditional,0,False
+Kategoria,Model 2 - Naive Bayes,Modern,Modern,17,True
+Kategoria,Model 2 - Logistic Regression,Historical,Historical,0,True
+Kategoria,Model 2 - Logistic Regression,Historical,Religious,2,False
+Kategoria,Model 2 - Logistic Regression,Historical,Traditional,0,False
+Kategoria,Model 2 - Logistic Regression,Historical,Modern,36,False
+Kategoria,Model 2 - Logistic Regression,Religious,Historical,0,False
+Kategoria,Model 2 - Logistic Regression,Religious,Religious,0,True
+Kategoria,Model 2 - Logistic Regression,Religious,Traditional,0,False
+Kategoria,Model 2 - Logistic Regression,Religious,Modern,0,False
+Kategoria,Model 2 - Logistic Regression,Traditional,Historical,0,False
+Kategoria,Model 2 - Logistic Regression,Traditional,Religious,0,False
+Kategoria,Model 2 - Logistic Regression,Traditional,Traditional,0,True
+Kategoria,Model 2 - Logistic Regression,Traditional,Modern,2,False
+Kategoria,Model 2 - Logistic Regression,Modern,Historical,0,False
+Kategoria,Model 2 - Logistic Regression,Modern,Religious,0,False
+Kategoria,Model 2 - Logistic Regression,Modern,Traditional,0,False
+Kategoria,Model 2 - Logistic Regression,Modern,Modern,17,True
+Kategoria,Model 2 - Linear SVM,Historical,Historical,0,True
+Kategoria,Model 2 - Linear SVM,Historical,Religious,2,False
+Kategoria,Model 2 - Linear SVM,Historical,Traditional,0,False
+Kategoria,Model 2 - Linear SVM,Historical,Modern,36,False
+Kategoria,Model 2 - Linear SVM,Religious,Historical,0,False
+Kategoria,Model 2 - Linear SVM,Religious,Religious,0,True
+Kategoria,Model 2 - Linear SVM,Religious,Traditional,0,False
+Kategoria,Model 2 - Linear SVM,Religious,Modern,0,False
+Kategoria,Model 2 - Linear SVM,Traditional,Historical,0,False
+Kategoria,Model 2 - Linear SVM,Traditional,Religious,0,False
+Kategoria,Model 2 - Linear SVM,Traditional,Traditional,0,True
+Kategoria,Model 2 - Linear SVM,Traditional,Modern,2,False
+Kategoria,Model 2 - Linear SVM,Modern,Historical,0,False
+Kategoria,Model 2 - Linear SVM,Modern,Religious,0,False
+Kategoria,Model 2 - Linear SVM,Modern,Traditional,0,False
+Kategoria,Model 2 - Linear SVM,Modern,Modern,17,True
+Kategoria,Model 2 - Random Forest,Historical,Historical,0,True
+Kategoria,Model 2 - Random Forest,Historical,Religious,1,False
+Kategoria,Model 2 - Random Forest,Historical,Traditional,0,False
+Kategoria,Model 2 - Random Forest,Historical,Modern,37,False
+Kategoria,Model 2 - Random Forest,Religious,Historical,0,False
+Kategoria,Model 2 - Random Forest,Religious,Religious,0,True
+Kategoria,Model 2 - Random Forest,Religious,Traditional,0,False
+Kategoria,Model 2 - Random Forest,Religious,Modern,0,False
+Kategoria,Model 2 - Random Forest,Traditional,Historical,0,False
+Kategoria,Model 2 - Random Forest,Traditional,Religious,0,False
+Kategoria,Model 2 - Random Forest,Traditional,Traditional,0,True
+Kategoria,Model 2 - Random Forest,Traditional,Modern,2,False
+Kategoria,Model 2 - Random Forest,Modern,Historical,0,False
+Kategoria,Model 2 - Random Forest,Modern,Religious,0,False
+Kategoria,Model 2 - Random Forest,Modern,Traditional,0,False
+Kategoria,Model 2 - Random Forest,Modern,Modern,17,True

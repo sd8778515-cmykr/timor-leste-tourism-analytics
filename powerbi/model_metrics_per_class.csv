@@ -1,0 +1,47 @@
+﻿task,model,class,precision,recall,f1_score,support
+Sentiment,Model 1 - Lexicon (sentiment),Positive,0.9224,0.678,0.7815,649
+Sentiment,Model 1 - Lexicon (sentiment),Neutral,0.1111,0.4426,0.1776,61
+Sentiment,Model 1 - Lexicon (sentiment),Negative,0.3571,0.2632,0.303,38
+Kategoria,Model 1 - Rule-based text (category),Historical,0.6667,0.0526,0.0976,38
+Kategoria,Model 1 - Rule-based text (category),Religious,0.0,0.0,0.0,0
+Kategoria,Model 1 - Rule-based text (category),Traditional,0.0,0.0,0.0,2
+Kategoria,Model 1 - Rule-based text (category),Modern,0.3137,0.9412,0.4706,17
+Kategoria,Model 1 - Rule-based context (category),Historical,0.0,0.0,0.0,38
+Kategoria,Model 1 - Rule-based context (category),Religious,0.0,0.0,0.0,0
+Kategoria,Model 1 - Rule-based context (category),Traditional,0.0,0.0,0.0,2
+Kategoria,Model 1 - Rule-based context (category),Modern,0.3019,0.9412,0.4571,17
+Sentiment,Baseline - Majority (sentiment),Positive,0.8676,1.0,0.9291,649
+Sentiment,Baseline - Majority (sentiment),Neutral,0.0,0.0,0.0,61
+Sentiment,Baseline - Majority (sentiment),Negative,0.0,0.0,0.0,38
+Sentiment,Model 2 - Naive Bayes,Positive,0.8676,1.0,0.9291,649
+Sentiment,Model 2 - Naive Bayes,Neutral,0.0,0.0,0.0,61
+Sentiment,Model 2 - Naive Bayes,Negative,0.0,0.0,0.0,38
+Sentiment,Model 2 - Logistic Regression,Positive,0.8996,0.9522,0.9251,649
+Sentiment,Model 2 - Logistic Regression,Neutral,0.2444,0.1803,0.2075,61
+Sentiment,Model 2 - Logistic Regression,Negative,0.5,0.2105,0.2963,38
+Sentiment,Model 2 - Linear SVM,Positive,0.8805,0.9877,0.931,649
+Sentiment,Model 2 - Linear SVM,Neutral,0.1538,0.0328,0.0541,61
+Sentiment,Model 2 - Linear SVM,Negative,0.8571,0.1579,0.2667,38
+Sentiment,Model 2 - Random Forest,Positive,0.8776,0.9723,0.9225,649
+Sentiment,Model 2 - Random Forest,Neutral,0.1053,0.0328,0.05,61
+Sentiment,Model 2 - Random Forest,Negative,0.3,0.0789,0.125,38
+Kategoria,Baseline - Majority (category),Historical,0.0,0.0,0.0,38
+Kategoria,Baseline - Majority (category),Religious,0.0,0.0,0.0,0
+Kategoria,Baseline - Majority (category),Traditional,0.0,0.0,0.0,2
+Kategoria,Baseline - Majority (category),Modern,0.2982,1.0,0.4595,17
+Kategoria,Model 2 - Naive Bayes,Historical,0.0,0.0,0.0,38
+Kategoria,Model 2 - Naive Bayes,Religious,0.0,0.0,0.0,0
+Kategoria,Model 2 - Naive Bayes,Traditional,0.0,0.0,0.0,2
+Kategoria,Model 2 - Naive Bayes,Modern,0.2982,1.0,0.4595,17
+Kategoria,Model 2 - Logistic Regression,Historical,0.0,0.0,0.0,38
+Kategoria,Model 2 - Logistic Regression,Religious,0.0,0.0,0.0,0
+Kategoria,Model 2 - Logistic Regression,Traditional,0.0,0.0,0.0,2
+Kategoria,Model 2 - Logistic Regression,Modern,0.3091,1.0,0.4722,17
+Kategoria,Model 2 - Linear SVM,Historical,0.0,0.0,0.0,38
+Kategoria,Model 2 - Linear SVM,Religious,0.0,0.0,0.0,0
+Kategoria,Model 2 - Linear SVM,Traditional,0.0,0.0,0.0,2
+Kategoria,Model 2 - Linear SVM,Modern,0.3091,1.0,0.4722,17
+Kategoria,Model 2 - Random Forest,Historical,0.0,0.0,0.0,38
+Kategoria,Model 2 - Random Forest,Religious,0.0,0.0,0.0,0
+Kategoria,Model 2 - Random Forest,Traditional,0.0,0.0,0.0,2
+Kategoria,Model 2 - Random Forest,Modern,0.3036,1.0,0.4658,17

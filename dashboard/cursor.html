@@ -1,0 +1,60 @@
+<script>
+(() => {
+  // Streamlit's HTML frame can access its same-origin host.
+  let host;
+  try { host = window.parent; void host.document.body; } catch (_) { return; }
+  const doc = host.document;
+  if (host.__tourismCursorCleanup) host.__tourismCursorCleanup();
+  const motion = host.matchMedia("(prefers-reduced-motion: reduce)");
+  const mouse = host.matchMedia("(pointer: fine)");
+  const halo = doc.createElement("div");
+  halo.setAttribute("aria-hidden", "true");
+  halo.style.cssText = "position:fixed;left:0;top:0;width:38px;height:38px;border:1px solid #5eeafaaa;border-radius:50%;background:radial-gradient(circle,#39e8ff22,transparent 70%);box-shadow:0 0 18px #32dfff55;pointer-events:none;z-index:2147483646;opacity:0;will-change:transform;";
+  doc.body.appendChild(halo);
+  let x = 0, y = 0, frame = 0;
+  const ripples = new Set();
+  const enabled = () => !motion.matches && mouse.matches;
+  const hide = () => { halo.style.opacity = "0"; };
+  const move = event => {
+    if (!enabled() || event.pointerType !== "mouse") { hide(); return; }
+    x = event.clientX; y = event.clientY;
+    halo.style.opacity = "1";
+    if (!frame) frame = host.requestAnimationFrame(() => {
+      halo.style.transform = "translate3d(" + (x - 19) + "px," + (y - 19) + "px,0)";
+      frame = 0;
+    });
+  };
+  const click = event => {
+    if (!enabled() || event.pointerType !== "mouse") return;
+    const ring = halo.cloneNode(false);
+    ring.style.left = event.clientX - 19 + "px";
+    ring.style.top = event.clientY - 19 + "px";
+    ring.style.transform = "none";
+    doc.body.appendChild(ring);
+    ripples.add(ring);
+    const animation = ring.animate(
+      [{ transform:"scale(.5)", opacity:.9 }, { transform:"scale(2.4)", opacity:0 }],
+      { duration:450, easing:"ease-out" }
+    );
+    animation.onfinish = () => { ring.remove(); ripples.delete(ring); };
+  };
+  doc.addEventListener("pointermove", move, {passive:true});
+  doc.addEventListener("pointerdown", click, {passive:true});
+  doc.documentElement.addEventListener("pointerleave", hide);
+  host.addEventListener("blur", hide);
+  motion.addEventListener("change", hide);
+  const cleanup = () => {
+    doc.removeEventListener("pointermove", move);
+    doc.removeEventListener("pointerdown", click);
+    doc.documentElement.removeEventListener("pointerleave", hide);
+    host.removeEventListener("blur", hide);
+    motion.removeEventListener("change", hide);
+    host.cancelAnimationFrame(frame);
+    halo.remove();
+    ripples.forEach(ring => ring.remove());
+    if (host.__tourismCursorCleanup === cleanup) delete host.__tourismCursorCleanup;
+  };
+  host.__tourismCursorCleanup = cleanup;
+  window.addEventListener("pagehide", cleanup, {once:true});
+})();
+</script>

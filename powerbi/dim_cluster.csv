@@ -1,0 +1,5 @@
+﻿cluster,cluster_label,size,share_pct,avg_rating,avg_tokens,dominant_category,dominant_sentiment,dominant_language,top_terms
+0,"Cluster 0: food, place, great",1489,48.6,4.45,28.5,Modern,Positive,en,"food, place, great, but, beautiful, beach, dili, delicious, here, staff"
+1,"Cluster 1: timor, leste, timor leste",1216,39.7,4.45,10.5,Modern,Neutral,id,"timor, leste, timor leste, fatin, furak, bagus, tempat, dili, indah, best"
+2,"Cluster 2: nice, nice place, place",171,5.6,4.52,6.3,Modern,Positive,en,"nice, nice place, place, great place, great, nice beach, food, beach, coffee, place visit"
+3,"Cluster 3: good, food, good food",186,6.1,4.6,6.9,Modern,Positive,en,"good, food, good food, good place, place, service, coffee, nice, food good, view"

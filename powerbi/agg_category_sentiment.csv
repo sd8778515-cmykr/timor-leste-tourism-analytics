@@ -1,0 +1,17 @@
+﻿category,sentiment,n_reviews,pct_within_category,total_category_reviews,category_sort,sentiment_sort
+Historical,Positive,470,65.73,715,1,1
+Historical,Neutral,194,27.13,715,1,2
+Historical,Negative,51,7.13,715,1,3
+Historical,Unknown,0,0.0,715,1,4
+Religious,Positive,158,69.0,229,2,1
+Religious,Neutral,58,25.33,229,2,2
+Religious,Negative,13,5.68,229,2,3
+Religious,Unknown,0,0.0,229,2,4
+Traditional,Positive,143,63.56,225,3,1
+Traditional,Neutral,68,30.22,225,3,2
+Traditional,Negative,14,6.22,225,3,3
+Traditional,Unknown,0,0.0,225,3,4
+Modern,Positive,3034,73.98,4101,4,1
+Modern,Neutral,847,20.65,4101,4,2
+Modern,Negative,220,5.36,4101,4,3
+Modern,Unknown,0,0.0,4101,4,4

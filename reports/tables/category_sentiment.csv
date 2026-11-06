@@ -1,0 +1,13 @@
+﻿category,sentiment,n_reviews,pct_within_category
+Historical,Positive,470,65.73
+Religious,Positive,158,69.0
+Traditional,Positive,143,63.56
+Modern,Positive,3034,73.98
+Historical,Neutral,194,27.13
+Religious,Neutral,58,25.33
+Traditional,Neutral,68,30.22
+Modern,Neutral,847,20.65
+Historical,Negative,51,7.13
+Religious,Negative,13,5.68
+Traditional,Negative,14,6.22
+Modern,Negative,220,5.36

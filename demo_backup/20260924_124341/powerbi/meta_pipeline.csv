@@ -1,0 +1,16 @@
+﻿metric_name,metric_value
+pipeline_run_utc,2026-09-11 05:29:04
+last_data_collection_utc,2026-09-04 06:32:03
+data_source,Google Maps - Places & Reviews (Timor-Leste tourist attractions)
+access_method,Apify actor `compass/crawler-google-places` (export JSON)
+collection_mode,batch snapshot (manual re-collection)
+update_interval,"Manual/periodiku - rekomenda re-koleta kada 7 loron (weekly batch). Sistema LA'OS real-time; bainhira API ho polling disponivel, troka deit `data_collection.load_raw_data()` ba fetch HTTP + interval 5 minutu (near-real-time) tuir Manual seksaun 5 nia nota."
+total_places,569
+total_reviews,3188
+reviews_with_text,1964
+clustering_algorithm,"K-Means (TF-IDF, unigram+bigram, sublinear tf)"
+clustering_k,4
+silhouette_score,0.0758
+best_sentiment_model,Logistic Regression
+best_sentiment_f1_macro,0.3788
+python_version,3.11

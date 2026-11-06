@@ -1,0 +1,32 @@
+{
+  "run_timestamp_utc": "2026-10-14T20:37:29+00:00",
+  "dataset_files": [
+    "dataset_turris_backup_2026-09-05.json",
+    "dataset_turris_backup_2026-10-14.json",
+    "dataset_turris_backup_2026-10-15.json",
+    "dataset_turris.json"
+  ],
+  "dataset_size_bytes": 29359257,
+  "data_source": {
+    "source_name": "Google Maps - Places & Reviews (Timor-Leste tourist attractions)",
+    "access_method": "Apify actor `compass/crawler-google-places` (export JSON)",
+    "source_url": "https://www.google.com/maps",
+    "api_status": "SEIDAUK IHA API KEY. Google Places API presiza billing account, tanba ne'e grupu uza snapshot JSON husi scraper hanesan fonte dadus ba versaun ida-ne'e.",
+    "collection_mode": "batch snapshot (manual re-collection)",
+    "update_interval": "Manual/periodiku - rekomenda re-koleta kada 7 loron (weekly batch). Sistema LA'OS real-time; bainhira API ho polling disponivel, troka deit `data_collection.load_raw_data()` ba fetch HTTP + interval 5 minutu (near-real-time) tuir Manual seksaun 5 nia nota.",
+    "collection_timestamp_field": "scrapedAt",
+    "unit_of_analysis": "1 baris = 1 review (komentariu turista) husi 1 lokal turizmu",
+    "terms_of_service_note": "Dadus publiku (review anonimu, la inklui email/telefone/dadus pessoal sensivel). Naran reviewer mantein deit ba dedupe teknika no LA hatudu iha dashboard - tuir Manual seksaun 10: 'Evita kolekta informasaun pessoal ne'ebe la nesesariu'."
+  },
+  "counts": {
+    "places": 705,
+    "rows": 5506,
+    "rows_with_review": 5280,
+    "places_without_review": 226,
+    "reviews_with_text": 3218
+  },
+  "collection_window": {
+    "scraped_at_min": "2026-08-21 00:47:43.259000+00:00",
+    "scraped_at_max": "2026-10-14 18:02:44.657000+00:00"
+  }
+}

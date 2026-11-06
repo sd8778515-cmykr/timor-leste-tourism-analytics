@@ -1,0 +1,312 @@
+{
+  "run_info": {
+    "started_utc": "2026-10-14T20:37:28+00:00",
+    "finished_utc": "2026-10-14T20:38:25+00:00",
+    "python_required": "3.11",
+    "dataset_files": [
+      "dataset_turris_backup_2026-09-05.json",
+      "dataset_turris_backup_2026-10-14.json",
+      "dataset_turris_backup_2026-10-15.json",
+      "dataset_turris.json"
+    ]
+  },
+  "preprocessing": {
+    "cleaning": {
+      "rows_before": 5506,
+      "duplicates_by_review_id": 0,
+      "duplicates_by_content": 10,
+      "invalid_rows_removed": 0,
+      "rows_after": 5496
+    },
+    "missing_values": {
+      "review_text_missing": 2278,
+      "review_text_missing_pct": 41.45,
+      "review_stars_missing": 298,
+      "city_missing_before_imputation": 662,
+      "city_still_unknown": 303,
+      "lat_lng_missing": 0,
+      "strategy": "Tratamentu esplisitu: la halo drop. `has_text`/`has_rating` marka disponibilidade; `city` imputa husi `address`; koordenada mamuk esklui deit husi mapa."
+    },
+    "text": {
+      "reviews_with_text": 3218,
+      "empty_after_cleaning": 156,
+      "avg_tokens_per_review": 17.88,
+      "vocabulary_size": 10501,
+      "steps": [
+        "lowercase",
+        "remove_url",
+        "remove_emoji",
+        "remove_non_alpha",
+        "tokenize",
+        "remove_stopwords",
+        "drop_tokens_len_lt_2"
+      ]
+    },
+    "outliers": {
+      "review_length_chars": {
+        "q1": 27.0,
+        "q3": 204.0,
+        "iqr": 177.0,
+        "lower_bound": -238.5,
+        "upper_bound": 469.5,
+        "n_outliers": 270,
+        "treatment": "flag_only_not_removed"
+      }
+    },
+    "feature_engineering": {
+      "created": [
+        "has_text",
+        "has_rating",
+        "n_tokens",
+        "n_chars",
+        "is_long_review",
+        "is_outlier_length",
+        "review_year",
+        "review_month",
+        "review_yearmonth",
+        "review_weekday",
+        "days_since_review",
+        "rating_deviation"
+      ],
+      "reference_date_for_recency": "2026-10-14 18:02:44.657000+00:00"
+    },
+    "train_test_split": {
+      "test_size": 0.25,
+      "random_state": 42,
+      "n_train": 2296,
+      "n_test": 766,
+      "n_not_used": 2434,
+      "note": "Split aplika deit ba review ho teksu (input ba model supervisadu)."
+    },
+    "saved_to": "D:\\turismo_project (2)\\turismo_project (1)\\data\\processed\\reviews_processed.csv"
+  },
+  "eda": {
+    "overview": {
+      "total_places": 705,
+      "total_rows": 5496,
+      "total_reviews": 5270,
+      "reviews_with_text": 3218,
+      "reviews_rating_only": 2052,
+      "places_without_review": 226,
+      "avg_rating_overall": 4.42,
+      "median_rating": 5.0,
+      "avg_tokens_with_text": 17.88
+    },
+    "descriptive_statistics": [
+      {
+        "variable": "review_stars",
+        "count": 5198.0,
+        "missing": 298,
+        "missing_pct": 5.42,
+        "mean": 4.42,
+        "median": 5.0,
+        "std": 1.06,
+        "min": 1.0,
+        "p25": 4.0,
+        "p50": 5.0,
+        "p75": 5.0,
+        "max": 5.0
+      },
+      {
+        "variable": "place_avg_rating",
+        "count": 5270.0,
+        "missing": 226,
+        "missing_pct": 4.11,
+        "mean": 4.4,
+        "median": 4.4,
+        "std": 0.41,
+        "min": 1.0,
+        "p25": 4.3,
+        "p50": 4.4,
+        "p75": 4.7,
+        "max": 5.0
+      },
+      {
+        "variable": "n_tokens",
+        "count": 5496.0,
+        "missing": 0,
+        "missing_pct": 0.0,
+        "mean": 10.47,
+        "median": 2.0,
+        "std": 22.41,
+        "min": 0.0,
+        "p25": 0.0,
+        "p50": 2.0,
+        "p75": 11.0,
+        "max": 356.0
+      },
+      {
+        "variable": "n_chars",
+        "count": 5496.0,
+        "missing": 0,
+        "missing_pct": 0.0,
+        "mean": 97.45,
+        "median": 15.0,
+        "std": 209.09,
+        "min": 0.0,
+        "p25": 0.0,
+        "p50": 15.0,
+        "p75": 104.0,
+        "max": 3359.0
+      },
+      {
+        "variable": "days_since_review",
+        "count": 5270.0,
+        "missing": 226,
+        "missing_pct": 4.11,
+        "mean": 1046.69,
+        "median": 743.5,
+        "std": 961.5,
+        "min": 0.0,
+        "p25": 320.25,
+        "p50": 743.5,
+        "p75": 1441.0,
+        "max": 5189.0
+      },
+      {
+        "variable": "rating_deviation",
+        "count": 5198.0,
+        "missing": 298,
+        "missing_pct": 5.42,
+        "mean": 0.02,
+        "median": 0.3,
+        "std": 0.98,
+        "min": -3.8,
+        "p25": -0.3,
+        "p50": 0.3,
+        "p75": 0.6,
+        "max": 2.7
+      },
+      {
+        "variable": "place_reviews_count",
+        "count": 5270.0,
+        "missing": 226,
+        "missing_pct": 4.11,
+        "mean": 74.99,
+        "median": 34.0,
+        "std": 123.75,
+        "min": 1.0,
+        "p25": 12.0,
+        "p50": 34.0,
+        "p75": 78.0,
+        "max": 685.0
+      }
+    ],
+    "category_distribution": {
+      "Historical": 715,
+      "Religious": 229,
+      "Traditional": 225,
+      "Modern": 4101
+    },
+    "sentiment_distribution": {
+      "Positive": 3805,
+      "Neutral": 1167,
+      "Negative": 298,
+      "Unknown": 226
+    },
+    "sentiment_source_distribution": {
+      "text": 3064,
+      "rating": 2206,
+      "none": 226
+    },
+    "category_x_sentiment": {
+      "Positive": {
+        "Historical": 470,
+        "Religious": 158,
+        "Traditional": 143,
+        "Modern": 3034
+      },
+      "Neutral": {
+        "Historical": 194,
+        "Religious": 58,
+        "Traditional": 68,
+        "Modern": 847
+      },
+      "Negative": {
+        "Historical": 51,
+        "Religious": 13,
+        "Traditional": 14,
+        "Modern": 220
+      }
+    },
+    "category_positive_pct": {
+      "Historical": 65.7,
+      "Religious": 69.0,
+      "Traditional": 63.6,
+      "Modern": 74.0
+    },
+    "avg_rating_by_category": {
+      "Historical": 4.46,
+      "Religious": 4.44,
+      "Traditional": 4.36,
+      "Modern": 4.41
+    },
+    "top_places_by_reviews": {
+      "Jaco Island": 95,
+      "Estátua do Presidente Nicolau Lobato": 88,
+      "Timor Plaza": 87,
+      "Naris No.1 Korean Restaurant": 87,
+      "Hotel Timor": 87,
+      "Balibo Fort Hotel": 87,
+      "Agora Food Studio": 87,
+      "Lahori Kabab": 86,
+      "Aru Bakery & Cafe": 71,
+      "Marobo Hot Spring": 68
+    },
+    "reviews_per_city": {
+      "Dili": 2810,
+      "Timor-Leste": 349,
+      "La hatene": 299,
+      "Baucau": 217,
+      "Pante Macassar": 143,
+      "Liquica": 128,
+      "Balibo": 116,
+      "Maubisse": 85,
+      "Bobonaro": 70,
+      "Dom Aleixo": 70
+    },
+    "language_distribution": {
+      "en": 2230,
+      "id": 475,
+      "pt": 144,
+      "ja": 57,
+      "ko": 48,
+      "de": 26,
+      "fr": 23,
+      "zh-Hant": 19,
+      "es": 18,
+      "eo": 16
+    },
+    "correlation_highlights": {
+      "n_tokens_vs_review_stars": -0.017,
+      "review_stars_vs_place_avg_rating": 0.386
+    },
+    "date_range": {
+      "min": "2012-07-29 23:48:18.877000+00:00",
+      "max": "2026-10-14 01:32:58.817000+00:00"
+    },
+    "last_data_collection": "2026-10-14 18:02:44.657000+00:00",
+    "figures": {
+      "rating_distribution": "D:\\turismo_project (2)\\turismo_project (1)\\reports\\figures\\01_distribuisaun_rating.png",
+      "text_length": "D:\\turismo_project (2)\\turismo_project (1)\\reports\\figures\\02_distribuisaun_naruk_teksu.png",
+      "category_vs_sentiment": "D:\\turismo_project (2)\\turismo_project (1)\\reports\\figures\\03_kategoria_vs_sentiment.png",
+      "trend": "D:\\turismo_project (2)\\turismo_project (1)\\reports\\figures\\04_trend_tempu.png",
+      "correlation": "D:\\turismo_project (2)\\turismo_project (1)\\reports\\figures\\05_korelasaun_scatter.png",
+      "ranking": "D:\\turismo_project (2)\\turismo_project (1)\\reports\\figures\\06_ranking_kategoria_lokal.png",
+      "geographic": "D:\\turismo_project (2)\\turismo_project (1)\\reports\\figures\\07_mapa_jeografiku.png",
+      "language": "D:\\turismo_project (2)\\turismo_project (1)\\reports\\figures\\08_lingua_review.png"
+    },
+    "tables": {
+      "descriptive_statistics": "D:\\turismo_project (2)\\turismo_project (1)\\reports\\tables\\descriptive_statistics.csv",
+      "category_sentiment": "D:\\turismo_project (2)\\turismo_project (1)\\reports\\tables\\category_sentiment.csv",
+      "correlation_matrix": "D:\\turismo_project (2)\\turismo_project (1)\\reports\\tables\\correlation_matrix.csv"
+    },
+    "key_questions_for_mining": [
+      "Kategoria destinasaun ne'ebe simu proporsaun sentiment positivu aas liu?",
+      "Kategoria ne'ebe hetan komentariu negativu barak liu, no tanba sa?",
+      "Bainhira ita husik dadus koalia mesak (clustering), tema natural hira mak mosu, no hanesan ka la'os ho 4 kategoria fixu?",
+      "Teksu review nia liafuan bele preve sentiment no kategoria ho presizaun hira?",
+      "Lokal ka munisipiu ne'ebe presiza atensaun (rating kraik / sentiment negativu makaas)?"
+    ]
+  }
+}

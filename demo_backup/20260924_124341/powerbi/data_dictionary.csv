@@ -1,0 +1,37 @@
+﻿column,data_type,description,unit_or_values,missing_values
+place_id,text,ID uniku lokal turizmu (Google placeId),-,Nunka mamuk
+place_name,text,Naran lokal turizmu,-,Nunka mamuk
+city,text,Cidade/munisipiu (imputa husi address se mamuk),-,296 seidauk hetan depois imputasaun
+lat / lng,decimal,Koordenada GPS lokal,grau,0
+place_avg_rating,decimal,Rating mediu lokal iha Google,estrela 1-5,Bele mamuk
+review_id,text,ID uniku review,-,Mamuk ba lokal sem review
+review_text,text,Teksu komentariu orijinal turista,-,~42% mamuk (rating-only/sem review)
+review_stars,integer,Rating individual husi review,estrela 1-5,262 mamuk
+review_date_parsed,datetime,Data-oras review publika (UTC),-,Bele mamuk
+review_language,text,Kodigu lingua orijinal (en/id/pt/tet/...),-,'unknown' se mamuk
+text_clean,text,Teksu depois lowercase + hasai url/emoji/simbolu,-,'' se sem teksu
+tokens_joined,text,Token depois hasai stopwords (input ba TF-IDF),-,'' se sem teksu
+n_tokens,integer,Kuantidade token depois preprocessing,token,0 se sem teksu
+n_chars,integer,Kuantidade karakter teksu orijinal,karakter,0 se sem teksu
+category_label,text,"ANOTASAUN MANUAL kategoria (ground truth, 49/569 lokal deit)",Historical/Religious/Traditional/Modern,3.145 mamuk (520 lokal seidauk anotadu)
+label_confidence,text,Nivel konfiansa anotasaun manual,high/medium/low,Mamuk se category_label mamuk
+category,text,"Kategoria FINAL (= category_label se iha, senaun fallback rule-based)",4 kategoria,Nunka mamuk
+category_rule_text,text,Predisaun Model 1 husi teksu review deit,4 kategoria,Nunka mamuk
+category_rule_context,text,Predisaun Model 1 husi teksu + naran lokal,4 kategoria,Nunka mamuk
+category_pred_ml,text,Predisaun Model 2 (supervisadu) - deit ba test set,4 kategoria,Mamuk se laos test set
+sentiment,text,Sentiment FINAL (teksu > rating > Unknown),Positive/Neutral/Negative/Unknown,Nunka mamuk
+sentiment_source,text,Fonte label sentiment,text/rating/none,Nunka mamuk
+sentiment_lexicon,text,Predisaun Model 1 lexicon husi teksu,3 label,Mamuk se sem teksu
+sentiment_true_proxy,text,Ground truth PROXY deriva husi rating,3 label,Mamuk se sem rating
+sentiment_pred_ml,text,Predisaun Model 2 (supervisadu) - deit ba test set,3 label,Mamuk se laos test set
+sentiment_score,integer,n_liafuan_positivu - n_liafuan_negativu,kontajen,0 se sem teksu
+cluster,integer,ID cluster K-Means,0..k-1,Mamuk se sem teksu
+cluster_x / cluster_y,decimal,Koordenada TruncatedSVD 2D ba scatter plot,-,Mamuk se sem teksu
+cluster_hier,integer,ID cluster Hierarchical (komparasaun),0..k-1,Mamuk se sem teksu
+split,text,Split preliminar preprocessing; evaluation uza sentiment_split/category_split,train/test/not_used,Nunka mamuk
+sentiment_split,text,Split atual ba tarefa sentiment; estratifikadu tuir proxy rating,train/test/not_used,Nunka mamuk
+category_split,text,Split atual ba kategoria; lokal train no test separadu,train/test/not_used,Nunka mamuk
+has_review,boolean,True se baris iha review; False se lokal sem review,true/false,Nunka mamuk
+category_source,text,Fonte kategoria final nivel lokal,anotasaun_manual/rule_based_fallback,Nunka mamuk
+is_outlier_length,boolean,Flag outlier naruk teksu (metodu IQR),true/false,Nunka mamuk
+scraped_at_parsed,datetime,Timestamp kolesaun dadus (Last updated),-,Nunka mamuk

@@ -1,0 +1,5 @@
+﻿sentiment,sentiment_sort,sentiment_color,sentiment_score_value
+Positive,1,#2E9E5B,1.0
+Neutral,2,#E2A33C,0.0
+Negative,3,#D1495B,-1.0
+Unknown,4,#8A93A0,

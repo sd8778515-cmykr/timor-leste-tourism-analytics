@@ -1,0 +1,8 @@
+﻿variable,review_stars,place_avg_rating,n_tokens,n_chars,days_since_review,rating_deviation,place_reviews_count
+review_stars,1.0,0.386,-0.017,-0.019,-0.112,0.92,0.035
+place_avg_rating,0.386,1.0,0.045,0.048,-0.146,-0.007,0.003
+n_tokens,-0.017,0.045,1.0,0.989,-0.008,-0.039,0.001
+n_chars,-0.019,0.048,0.989,1.0,-0.013,-0.041,0.002
+days_since_review,-0.112,-0.146,-0.008,-0.013,1.0,-0.056,-0.241
+rating_deviation,0.92,-0.007,-0.039,-0.041,-0.056,1.0,0.036
+place_reviews_count,0.035,0.003,0.001,0.002,-0.241,0.036,1.0
