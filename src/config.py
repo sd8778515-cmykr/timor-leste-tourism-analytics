@@ -32,12 +32,31 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
 load_dotenv(PROJECT_ROOT / ".env")
 
+
+def _runtime_secret(name: str, default: str = "") -> str:
+    """Read a local .env value or a Streamlit Community Cloud secret.
+
+    Streamlit exposes root-level secrets as environment variables in most
+    deployments. The explicit ``st.secrets`` fallback keeps the Apify feature
+    working when the hosting environment does not export those values.
+    """
+    value = os.getenv(name)
+    if value:
+        return value.strip()
+
+    try:
+        import streamlit as st
+
+        return str(st.secrets.get(name, default)).strip()
+    except Exception:
+        return default
+
 # ------------------------------------------------------- APIFY (seksaun 5/10) --
 # Fonte TUNGGAL: destinasaun + review, via Apify actor `compass/crawler-google-places`.
 # Token sei LA iha .env -> sistema book funsiona hanesan antes (batch snapshot local
 # iha data/raw/), haree data_collection.fetch_from_api().
-APIFY_API_TOKEN = os.getenv("APIFY_API_TOKEN", "").strip()
-APIFY_ACTOR_ID = os.getenv("APIFY_ACTOR_ID", "compass/crawler-google-places").strip()
+APIFY_API_TOKEN = _runtime_secret("APIFY_API_TOKEN")
+APIFY_ACTOR_ID = _runtime_secret("APIFY_ACTOR_ID", "compass/crawler-google-places")
 APIFY_API_BASE = "https://api.apify.com/v2"
 # Ficheiru ne'ebe ema bele edita MANUALMENTE (naran lokal/kota/kantidade) atu
 # kontrola saida ne'ebe request husi Apify - haree apify_request.json iha
