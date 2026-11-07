@@ -1,5 +1,0 @@
-﻿cluster,cluster_label,size,share_pct,avg_rating,avg_tokens,dominant_category,dominant_sentiment,dominant_language,top_terms
-0,"Cluster 0: good, beach, but",1491,78.6,4.43,20.5,Modern,Positive,en,"good, beach, but, place, dili, beautiful, great, indah, best, bagus"
-1,"Cluster 1: nice, place, nice place",179,9.4,4.52,7.6,Modern,Positive,en,"nice, place, nice place, great place, good, great, nice beach, beach, good place, place visit"
-2,"Cluster 2: furak, fatin, fatin furak",78,4.1,4.18,5.0,Modern,Positive,id,"furak, fatin, fatin furak, indonesia, baucau, suai, friendly, rei, area, go"
-3,"Cluster 3: timor, leste, timor leste",150,7.9,4.75,35.6,Modern,Positive,en,"timor, leste, timor leste, dili, history, museum, one, about, tour, best"
