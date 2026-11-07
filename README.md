@@ -695,7 +695,8 @@ Depois ne'e:
 | Item | Ligasaun |
 | --- | --- |
 | GitHub Repository | [Source code](https://github.com/sd8778515-cmykr/timor-leste-tourism-analytics) |
-| Dashboard (deploy) | [Open live dashboard](https://timor-leste-tourism-analytics-r4vsccrruqoajcvpcql2d7.streamlit.app/) |
+| Vídeo YouTube | _(prenxe husi grupu)_ |
+| Dashboard (deploy) | _(opsional — Streamlit Community Cloud)_ |
 
 ---
 
