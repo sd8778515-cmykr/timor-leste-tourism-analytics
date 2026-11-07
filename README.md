@@ -692,12 +692,10 @@ Depois ne'e:
 
 ## 16. Ligasaun Submisaun
 
-| Item                | Ligasaun                                                    |
-| ------------------- | ----------------------------------------------------------- |
-| GitHub Repository   | _(prenxe husi grupu)_                                       |
-| Vídeo YouTube       | _(prenxe husi grupu)_                                       |
-| Dashboard (deploy)  | _(opsional — Streamlit Community Cloud)_                    |
-| Template submisaun  | [`reports/TEMPLATE_SUBMISSION.md`](reports/TEMPLATE_SUBMISSION.md) |
+| Item | Ligasaun |
+| --- | --- |
+| GitHub Repository | [Source code](https://github.com/sd8778515-cmykr/timor-leste-tourism-analytics) |
+| Dashboard (deploy) | [Open live dashboard](https://timor-leste-tourism-analytics-r4vsccrruqoajcvpcql2d7.streamlit.app/) |
 
 ---
 
